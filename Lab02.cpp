@@ -1,5 +1,5 @@
 // Lab 02
-// Questão 1:
+// QuestÃ£o 1:
 
 #include <iostream>
 
@@ -75,9 +75,9 @@ int main() {
     char borda, preenchimento;
     bool preencher;
 
-    std::cout << "Digite a largura do retângulo: ";
+    std::cout << "Digite a largura do retÃ¢ngulo: ";
     std::cin >> largura;
-    std::cout << "Digite o comprimento do retângulo: ";
+    std::cout << "Digite o comprimento do retÃ¢ngulo: ";
     std::cin >> comprimento;
 
     std::cout << "Digite o caractere da borda: ";
@@ -85,7 +85,7 @@ int main() {
     std::cout << "Digite o caractere de preenchimento: ";
     std::cin >> preenchimento;
 
-    std::cout << "Deseja preencher o retângulo? (1 para sim, 0 para não): ";
+    std::cout << "Deseja preencher o retÃ¢ngulo? (1 para sim, 0 para nÃ£o): ";
     std::cin >> preencher;
 
     CRetangulo retangulo(comprimento, largura, borda, preenchimento, preencher);
@@ -94,7 +94,7 @@ int main() {
     return 0;
 }
 
-//Questão 2:
+//QuestÃ£o 2:
           
 #include <iostream>
 
@@ -107,11 +107,11 @@ public:
     CRetangulo(double comprimento = 1, double largura = 1) {
         set_comprimento(comprimento);
         set_largura(largura);
-        std::cout << "Retângulo criado: (" << comprimento << ", " << largura << ")" << std::endl;
+        std::cout << "RetÃ¢ngulo criado: (" << comprimento << ", " << largura << ")" << std::endl;
     }
 
     ~CRetangulo() {
-        std::cout << "Retângulo destruído: (" << comprimento << ", " << largura << ")" << std::endl;
+        std::cout << "RetÃ¢ngulo destruÃ­do: (" << comprimento << ", " << largura << ")" << std::endl;
     }
 
     double get_comprimento() const {
@@ -165,7 +165,7 @@ public:
 };
 
 
-//Questão 3:
+//QuestÃ£o 3:
 
 // cretangulo.h
 
@@ -270,7 +270,7 @@ int main() {
     return 0;
 }
 
-//Questão 4:
+//QuestÃ£o 4:
           
 // cretangulo.h
 
@@ -298,7 +298,7 @@ public:
     void imprimir_retangulo() const;
     bool eh_quadrado() const;
 
-    void leitura(); // Adicione esta linha
+    void leitura();
 };
 
 #endif // CRETANGULO_H
@@ -308,15 +308,14 @@ public:
 #include <iostream>
 #include "cretangulo.h"
 
-// ... (Outros métodos aqui) ...
 
 void CRetangulo::leitura() {
     double novo_comprimento, nova_largura;
 
-    std::cout << "Digite o comprimento do retângulo: ";
+    std::cout << "Digite o comprimento do retÃ¢ngulo: ";
     std::cin >> novo_comprimento;
 
-    std::cout << "Digite a largura do retângulo: ";
+    std::cout << "Digite a largura do retÃ¢ngulo: ";
     std::cin >> nova_largura;
 
     set_comprimento(novo_comprimento);
@@ -336,7 +335,7 @@ int main() {
     return 0;
 }
 
-//Questão 5:
+//QuestÃ£o 5:
 
 // main.cpp
 
@@ -348,15 +347,15 @@ int main() {
     CRetangulo retangulos[tamanho_vetor];
 
     for (int i = 0; i < tamanho_vetor; i++) {
-        std::cout << "Digite os atributos para o retângulo " << i + 1 << ":\n";
+        std::cout << "Digite os atributos para o retÃ¢ngulo " << i + 1 << ":\n";
         retangulos[i].leitura();
         std::cout << "\n";
     }
 
-    std::cout << "Retângulos criados:\n";
+    std::cout << "RetÃ¢ngulos criados:\n";
 
     for (int i = 0; i < tamanho_vetor; i++) {
-        std::cout << "Retângulo " << i + 1 << ":\n";
+        std::cout << "RetÃ¢ngulo " << i + 1 << ":\n";
         retangulos[i].imprimir_retangulo();
         std::cout << "\n";
     }
@@ -364,7 +363,7 @@ int main() {
     return 0;
 }
 
-//Questão 6:
+//QuestÃ£o 6:
           
 // main.cpp
 
@@ -376,21 +375,21 @@ int main() {
 
     ptr_retangulo->leitura();
 
-    std::cout << "Retângulo criado:\n";
+    std::cout << "RetÃ¢ngulo criado:\n";
     ptr_retangulo->imprimir_retangulo();
     std::cout << "\n";
 
     double area = ptr_retangulo->calcular_area();
     double perimetro = ptr_retangulo->calcular_perimetro();
-    std::cout << "Área: " << area << "\n";
-    std::cout << "Perímetro: " << perimetro << "\n";
+    std::cout << "Ãrea: " << area << "\n";
+    std::cout << "PerÃ­metro: " << perimetro << "\n";
 
     delete ptr_retangulo;
 
     return 0;
 }
 
-//Questão 7:
+//QuestÃ£o 7:
           
 // poligono_regular.h
 
@@ -435,23 +434,23 @@ double PoligonoRegular::perimetro() const {
 std::string PoligonoRegular::nome_poligono() const {
     switch (num_lados) {
     case 3:
-        return "Triângulo";
+        return "TriÃ¢ngulo";
     case 4:
         return "Quadrado";
     case 5:
-        return "Pentágono";
+        return "PentÃ¡gono";
     case 6:
-        return "Hexágono";
+        return "HexÃ¡gono";
     case 7:
-        return "Heptágono";
+        return "HeptÃ¡gono";
     case 8:
-        return "Octógono";
+        return "OctÃ³gono";
     case 9:
-        return "Eneágono";
+        return "EneÃ¡gono";
     case 10:
-        return "Decágono";
+        return "DecÃ¡gono";
     default:
-        return "Polígono";
+        return "PolÃ­gono";
     }
 }
 
@@ -463,9 +462,9 @@ std::string PoligonoRegular::nome_poligono() const {
 int main() {
     PoligonoRegular poligono(6, 4);
 
-    std::cout << "Nome do polígono: " << poligono.nome_poligono() << std::endl;
-    std::cout << "Área: " << poligono.area() << std::endl;
-    std::cout << "Perímetro: " << poligono.perimetro() << std::endl;
+    std::cout << "Nome do polÃ­gono: " << poligono.nome_poligono() << std::endl;
+    std::cout << "Ãrea: " << poligono.area() << std::endl;
+    std::cout << "PerÃ­metro: " << poligono.perimetro() << std::endl;
 
     return 0;
 }
