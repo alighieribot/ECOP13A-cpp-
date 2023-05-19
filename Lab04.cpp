@@ -10,7 +10,6 @@ using namespace std;
 
 class CFracao
 {
-    // ... outras declarações e métodos já existentes ...
 
     // Sobrecarga de operadores aritméticos
     CFracao operator+(const CFracao &rhs);
@@ -183,7 +182,7 @@ int main()
         cout << "Complexo 1 == Complexo 2: " << (complexo1 == complexo2 ? "true" : "false") << endl;
         cout << "Complexo 1 != Complexo 2: " << (complexo1 != complexo2 ? "true" : "false") << endl;
 
-        // Testar a entrada e saída de um novo Complexo
+       
         Complexo complexo3;
         cout << "Digite um novo numero complexo (formato a b): ";
         cin >> complexo3;
